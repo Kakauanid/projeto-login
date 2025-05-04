@@ -1,11 +1,16 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
 :root {
     --cor1:#0FC2C0;
     --cor2:#0CABA8;
     --cor3:#008F8C;
     --cor4:#015958;
     --cor5:#023535;
+
+    --fonte1: "Rubik Bubbles", system-ui;
+    --fonte2: ;
 }
 
 * {
@@ -24,7 +29,12 @@ body {
 }
 
 h2 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte1) ;
+    font-size: 2.5em;
+    background: linear-gradient(90deg, var(--cor1), var(--cor2));
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.269);
 }
 
