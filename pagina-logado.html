@@ -30,11 +30,36 @@
             border-radius: 15px;
             box-shadow: 0 0 10px black;
         }
+        .sair {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        #btn {
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #0FC2C0, #0CABA8);
+            color: white;
+            font-weight: bold;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.103);
+        }
+        #btn:hover {
+            background: #0CABA8;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <h1>Seja bem vindo!</h1>
-    <img src="imagens/Monstro de Gelo.png" alt="Monstro de Gelo">
+
+    <div class="sair">
+        <img src="imagens/Monstro de Gelo.png" alt="Monstro de Gelo">
+        <button onclick="logout()" id="btn">Sair</button>
+    </div>
 
     <script> 
         if (localStorage.getItem("logado") !== "true") {
@@ -42,5 +67,6 @@
             window.location.href = "index.html";
         }
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -4,9 +4,8 @@ const usuarioInput = document.querySelector('input[type="text"]');
 const botaoVerSenha = document.getElementById('btn-ver');
 const olhoAberto = document.getElementById('olho-aberto');
 const olhoFechado = document.getElementById('olho-fechado');
-const form = document.querySelector('form'); // Obtenha o formulário
-
-// Dados fictícios de login
+const form = document.querySelector('form'); 
+// Dados de login
 const usuarioValido = "usuario123";
 const senhaValida = "senha123";
 
@@ -36,6 +35,12 @@ form.addEventListener('submit', (e) => {
         window.location.href = "pagina-logado.html"; 
     } else {
         // Caso o login falhe
-        alert('Login negado! Usuário ou senha inválidos.');
+        alert('Usuário ou senha inválidos. Tente novamente.');
     }
 });
+
+function logout() {
+    localStorage.removeItem('logado');
+    localStorage.removeItem('usuarioLogado');
+    window.location.href = "index.html";
+}
